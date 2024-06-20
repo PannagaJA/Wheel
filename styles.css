@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image:url("backgroundformentalhealth.jpg");
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+   
+
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.buy-now {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url("hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+}
+
+.learn-more {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+.rating span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.story {
+    padding: 50px 0;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+}
+
+.story-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.story-title h2 {
+    margin-bottom: 10px;
+}
+
+.story-title i {
+    font-size: 3em;
+    color: #007bff;
+}
+
+.story-image {
+    width: 500px;
+}
+
+.services {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.services-box {
+    text-align: center;
+}
+
+.services-box h2 {
+    margin-bottom: 30px;
+}
+
+.service {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.service:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    height: 10%;
+}
+.image-container {
+    width: 60px; /* Adjust width and height as needed */
+    height: 60px; /* Adjust width and height as needed */
+    overflow: hidden; /* Hide overflowing parts of the image */
+    border-radius: 50%;
+  }
+  
+  .image-container img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+
+  }
