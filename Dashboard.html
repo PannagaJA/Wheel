@@ -3,196 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dental Clinic Name</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Basic Styles */
+  <link rel="stylesheet" href="styles.css">
+  <title>MindMe</title>
+  <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/css/uikit.min.css" />
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1, h2, h3 {
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: #0095ff;
-}
-
-a:hover {
-  color: #007bff;
-}
-
-img {
-  width: 100%;
-  max-width: 300px; /* Adjust as needed */
-}
-
-/* Header Styles */
-
-.header {
-  background-color: #fff;
-  padding: 10px 0;
-}
-
-.header img {
-  height: 80px; /* Adjust logo height */
-}
-
-.navigation {
-  float: right; /* Change to flexbox for responsive layout */
-}
-
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-/* Main Section Styles */
-
-.main {
-  padding-bottom: 50px;
-}
-
-.hero {
-  background-color: #f5f5f5;
-  padding: 50px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: #0095ff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.services {
-  padding: 50px 0;
-}
-
-.services h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.service-card {
-  float: left; /* Change to flexbox for responsive layout */
-  width: 33%;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.service-card img {
-  margin-bottom: 10px;
-}
-
-.guaranteed-work, .dental-implant {
-  padding: 50px 0;
-  text-align: center;
-}
-
-/* Footer Styles */
-
-.footer {
-  background-color: #f0f0f0;
-  padding: 20px 0;
-  text-align: center;
-}
-
-  </style>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
+<style>
+  .nav{
+    background-image:url("data:image/jpeg;base64,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");
+    background-position: center 50%; /* Centers the image horizontally and positions it 50% from the top */
+    uk-width-1-1
+    background-repeat: no-repeat;
+  }
+  .uk-box-shadow-small{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+  }
+  .container{
+    text-align: center;
+    
+  }
+ 
+</style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="logo.png" alt="Dental Clinic Logo">  <nav class="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="uk-flex uk-flex-center nav">
+    <div uk-navbar style="width: 90%; height: 10%;">
+        <div uk-navbar-left>
+            <a href="#" class="logo">
+                <div class="image-container" style="margin-top:10px ;"><img src="mentalhealthprofile.png" alt="logo"></div> 
+                <h2 style="margin-left: 10px; margin-bottom: 45px;" class="uk-text-bolder ">MindMe</h2>
+            </a>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="#"><b>Home</b></a></li>
+                <li class="uk-active"><a href="#"><b>ABOUT US</b></a></li>
+                <li class="uk-active"><a href="#"><b>SERVICES</b></a></li>
+                <li class="uk-active"><a href="#"><b>CONTACT US</b></a></li>
+            </ul>
+        </div>
     </div>
-  </header>
-
-  <main class="main">
-    <section class="hero">
-      <div class="container">
-        <h1>Changing Lives One Smile At A Time</h1>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a href="#" class="btn">View All Services</a>
-      </div>
-    </section>
-
-    <section class="services">
-      <div class="container">
-        <h2>Excellent Services</h2>
-        <div class="service-card">
-          <img src="service1.jpg" alt="Service 1">  <h3>Service 1 Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="service-card">
-          <img src="service2.jpg" alt="Service 2">  <h3>Service 2 Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="service-card">
-          <img src="service3.jpg" alt="Service 3">  <h3>Service 3 Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guaranteed-work">
-      <div class="container">
-        <h2>Guaranteed Work</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </section>
-
-    <section class="dental-implant">
-      <div class="container">
-        <h2>Dental Implants</h2>
-        <img src="dental_implant.jpg" alt="Dental Implant">  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </section>
-
-    <section class="services">
-      <div class="container">
-        <h2>24/7 Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a href="#" class="btn">Contact Us</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2
+</div>
+<div class="container uk-position-center">
+    <div class="uk-box-shadow-small ">Item1</div>
+    <div class="uk-box-shadow-small">Item2</div>
+    <div class="uk-box-shadow-small">Item3</div>
+  </div>
+</div>
+</body>
+</html>

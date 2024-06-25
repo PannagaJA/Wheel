@@ -22,10 +22,16 @@
         font-family: "Quicksand", sans-serif;
     }
     .gradient-text {
-  background-image: linear-gradient(to right, red , yellow);  /* Change colors and direction as desired */
-  color: transparent;  /* Makes the text invisible and lets the background gradient show through */
-  background-clip: text;  /* Clips the background to the shape of the text */
-  text-fill-color: transparent;  /* Removes the default text color */
+        font-size: 72px;
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+  to top,
+  hsl(240deg 100% 20%) 0%,
+  hsl(327deg 100% 35%) -1%,
+  hsl(55deg 100% 50%) 99%
+); /* Change colors and direction as desired */
 }
 
 
@@ -36,7 +42,7 @@
         <div uk-navbar style="width: 90%;">
             <div uk-navbar-left>
                 <a href="#" class="logo">
-                    <div class="image-container" style="margin-top:10px ;"><img src="mentalhealthprofile.png" alt="logo"></div> 
+                    <div class="image-container" style="margin-top:10px ;"><img src="/images/mentalhealthprofile.png" alt="logo"></div> 
                     <h2 style="margin-left: 10px; margin-bottom: 45px;" class="uk-text-bolder ">MindMe</h2>
                 </a>
             </div>
@@ -54,18 +60,17 @@
                 <div class="container">
                     <div class="hero-content">
                         <div class="hero-text">
-                            <h1 style="color: #e6e3d3;" class="nice-font uk-text-bolder uk-animation-slide-left">Your Path to Mental Wellness Starts Here</h1>
+                            <h1  class="nice-font uk-text-bolder uk-animation-slide-left gradient-text">Your Path to Mental Wellness Starts Here</h1>
                             <p class="nice-font2 ">Mental health is just as important as physical health. Taking care of your mind isn't selfish, it's essential for a happy and fulfilling life.  This website is here to support you on your journey towards mental well-being.</p>
                             <button class="learn-more uk-text-bolder container nice-font">Get Started</button>
                         </div>
                     </div>
                 </div>
             </div>
-        
-    <footer class="footer">
-        <div class="container nice-font">
-            <p>Copyright &copy; 2023 MindMe. All Rights Reserved.</p>
-        </div>
-    </footer>
+            <footer>
+                <p>&copy; 2024 MindMe. All rights reserved.</p>
+                <a href="mailto:contact@Mindme.com">Contact Us</a>
+              </footer>
+              
 </body>
 </html>
